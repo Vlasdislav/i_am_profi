@@ -26,7 +26,7 @@ bool cmp(const int &lhs, const int &rhs) {
 
 inline void inputBuildinds() {
     for (int x = 0; x < n; ++x) {
-        for (int y = 0; y < n; ++y) {
+        for (int y = 0; y < m; ++y) {
             cin >> buildinds[x][y];
             if (buildinds[x][y] == 1) {
                 Ox.emplace_back(x);
