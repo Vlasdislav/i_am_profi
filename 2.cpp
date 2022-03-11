@@ -14,16 +14,6 @@ bool cmp(const int &lhs, const int &rhs) {
     return lhs > rhs;
 }
 
-/*
-
-Вектор buildinds будет заполнятся надичием здания
-в кокретной координате
-
-0 - если здания нет
-1 - если здание есть
-
-*/
-
 inline void inputBuildinds() {
     for (int x = 0; x < n; ++x) {
         for (int y = 0; y < m; ++y) {
@@ -95,7 +85,7 @@ int main() {
     sort(Oy.begin(), Oy.end(), cmp);
     calculatingDistances(Ox); // Главная функци, подсчитывает все расстояния между зданиями
     calculatingDistances(Oy);
-    sum += calculatingOtherDistances(API_cnt_floors());
+    sum += calculatingOtherDistances(API_cnt_floors()); // Изменение длины с учетом высот зданий
     cout << sum; // Вывод результирующей суммы расстояний
     return 0;
 }
