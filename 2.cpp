@@ -10,6 +10,10 @@ vector<int> Ox, Oy;
 int sum = 0; // Итоговая сумма
 int k = 0; // Вспомогательная переменная, нужна для фиксирования количества зданий на карте 
 
+bool cmp(const int &lhs, const int &rhs) {
+    return lhs > rhs;
+}
+
 /*
 
 Вектор buildinds будет заполнятся надичием здания
@@ -19,10 +23,6 @@ int k = 0; // Вспомогательная переменная, нужна д
 1 - если здание есть
 
 */
-
-bool cmp(const int &lhs, const int &rhs) {
-    return lhs > rhs;
-}
 
 inline void inputBuildinds() {
     for (int x = 0; x < n; ++x) {
